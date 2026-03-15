@@ -6,3 +6,5 @@
   golden-model / toolchain repos.
 - Use a narrow Cocotb signal-map slice first.
 - Keep the first validator advisory-only.
+- Add a second advisory validator for explicit clock/reset declaration before
+  expanding into protocol timing or golden-model validation.

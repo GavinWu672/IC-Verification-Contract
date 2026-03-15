@@ -9,3 +9,6 @@
   - session-start context injection
   - pre-task rule activation
   - post-task advisory validator execution
+- The current contract now has two advisory validators:
+  - `signal_map_validator`
+  - `clock_reset_validator`

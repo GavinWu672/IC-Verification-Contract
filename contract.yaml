@@ -17,3 +17,4 @@ rule_roots:
   - rules
 validators:
   - validators/signal_map_validator.py
+  - validators/clock_reset_validator.py

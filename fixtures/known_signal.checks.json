@@ -11,5 +11,8 @@
     "cocotb_tests::test_handshake_cleanup_release"
   ],
   "exception_verified": true,
-  "cleanup_verified": true
+  "cleanup_verified": true,
+  "declared_clock_signal": "clk",
+  "declared_reset_signal": "rst_n",
+  "declared_reset_polarity": "active_low"
 }

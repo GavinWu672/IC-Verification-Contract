@@ -28,6 +28,7 @@ This contract is meant to reduce a very specific Way B failure mode:
 - `facts/signal_map.json`
 - `rules/ic-verification/safety.md`
 - `validators/signal_map_validator.py`
+- `validators/clock_reset_validator.py`
 - `fixtures/`
 
 ## Minimal Verification Flow
@@ -50,7 +51,13 @@ The first milestone is not full protocol correctness. It is:
 - contract load works
 - domain documents inject correctly
 - external rules activate
-- one real validator can flag an unknown DUT signal access
+- multiple validators can review both DUT signal access and clock/reset declarations
+
+The repo now includes:
+
+- an unknown-signal advisory baseline
+- a missing clock/reset declaration advisory baseline
+- a clean baseline where both validators return `ok=True`
 
 The current fixture flow uses `LANG = Python` in its governance contract so the
 repo reflects real Cocotb-style outputs instead of relying on a workaround

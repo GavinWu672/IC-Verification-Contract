@@ -3,18 +3,15 @@
     "clk",
     "rst_n",
     "valid_i",
-    "phantom_debug_o"
+    "ready_o"
   ],
   "test_names": [
-    "cocotb_tests::test_unknown_signal_error_path",
+    "cocotb_tests::test_clock_reset_failure_path",
     "cocotb_tests::test_reset_cleanup_release"
   ],
   "exception_verified": true,
   "cleanup_verified": true,
-  "declared_clock_signal": "clk",
-  "declared_reset_signal": "rst_n",
-  "declared_reset_polarity": "active_low",
   "failure_cases": [
-    "unknown DUT signal access"
+    "missing clock reset declaration"
   ]
 }
