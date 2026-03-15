@@ -6,7 +6,8 @@ This contract currently covers:
 
 - startup context injection for DUT interface facts
 - external rule activation for IC verification review
-- post-task advisory validation for unknown signal access
+- post-task hard-stop validation for unknown signal access
+- post-task advisory validation for clock/reset declaration gaps
 
 It does not yet cover:
 

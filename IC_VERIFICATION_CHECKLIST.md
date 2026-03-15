@@ -15,4 +15,5 @@
 
 - Focus on Cocotb-style signal mapping
 - Use machine-readable facts from `facts/signal_map.json`
-- Treat validator results as advisory until domain confidence grows
+- Treat unknown-signal access as blocking once it conflicts with the machine-readable signal map
+- Keep clock/reset declaration checks advisory until more real-project facts are connected

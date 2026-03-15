@@ -60,13 +60,20 @@ The first milestone is not full protocol correctness. It is:
 
 The repo now includes:
 
-- an unknown-signal advisory baseline
+- an unknown-signal blocking baseline
 - a missing clock/reset declaration advisory baseline
 - a clean baseline where both validators return `ok=True`
 
 The current fixture flow uses `LANG = Python` in its governance contract so the
 repo reflects real Cocotb-style outputs instead of relying on a workaround
 language label.
+
+The contract now also marks:
+
+- `ICV-001`
+
+as a `hard_stop_rule`, so unknown DUT signal access can escalate into a blocking
+`post_task_check` error while clock/reset declaration gaps remain advisory.
 
 ## Next Practical Step
 

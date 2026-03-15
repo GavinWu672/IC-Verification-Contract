@@ -1,15 +1,16 @@
 # Validation Requirements
 
-This repo is still advisory-first, but the following checks should pass before
-claiming the contract is healthy.
+This repo now mixes one hard-stop baseline with one advisory baseline. The
+following checks should pass before claiming the contract is healthy.
 
 ## Required
 
 - `contract.yaml` loads successfully
 - `session_start` validator preflight is green
 - `pre_task_check` activates `ic-verification`
-- warning baseline works:
-  - unknown signal fixture produces `ICV-SIG-001`
+- hard-stop baseline works:
+  - unknown signal fixture produces blocking `ICV-SIG-001`
+- advisory baseline works:
   - missing clock/reset fixture produces `ICV-CLKRST-*`
 - clean baseline works:
   - known signal + declared clock/reset fixture returns `ok=True`

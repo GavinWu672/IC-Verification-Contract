@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Advisory validator for Cocotb-style DUT signal access.
+Validator for Cocotb-style DUT signal access against machine-readable signal-map facts.
 """
 
 from __future__ import annotations
@@ -33,18 +33,18 @@ class SignalMapValidator(DomainValidator):
                 },
             )
 
-        warnings = [
+        violations = [
             f"ICV-SIG-001: unknown DUT signal '{signal_name}'"
             for signal_name in signal_accesses
             if signal_name not in known_signals
         ]
         return ValidatorResult(
-            ok=len(warnings) == 0,
+            ok=len(violations) == 0,
             rule_ids=self.rule_ids,
-            warnings=warnings,
+            violations=violations,
             evidence_summary=f"Checked {len(signal_accesses)} signal references against {len(known_signals)} known DUT signals",
             metadata={
-                "mode": "advisory",
+                "mode": "contract-driven",
                 "signal_accesses": signal_accesses,
                 "known_signals": sorted(known_signals),
             },

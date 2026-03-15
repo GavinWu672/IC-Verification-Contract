@@ -12,8 +12,8 @@
   - `ok=True`
   - `contract=ic-verification/medium`
 - `post_task_check.py --contract D:/IC-Verification-Contract/contract.yaml --checks-file D:/IC-Verification-Contract/fixtures/unknown_signal.checks.json --file D:/IC-Verification-Contract/fixtures/post_task_response.txt --risk medium --oversight review-required --format json`
-  - `ok=True`
-  - advisory validator warning: `ICV-SIG-001: unknown DUT signal 'phantom_debug_o'`
+  - `ok=False`
+  - blocking domain-validator result: `ICV-SIG-001: unknown DUT signal 'phantom_debug_o'`
 - `post_task_check.py --contract D:/IC-Verification-Contract/contract.yaml --checks-file D:/IC-Verification-Contract/fixtures/known_signal.checks.json --file D:/IC-Verification-Contract/fixtures/post_task_response.txt --risk medium --oversight review-required --format json`
   - `ok=True`
   - `signal_map_validator` returned `ok=True` with no warnings
@@ -24,6 +24,14 @@
     - `ICV-CLKRST-001`
     - `ICV-CLKRST-003`
     - `ICV-CLKRST-005`
+
+## Enforcement Position
+
+- `ICV-001` is now listed under `hard_stop_rules`, so unknown DUT signal access
+  becomes a blocking `post_task_check` outcome.
+- `ICV-002` remains advisory because missing or mismatched clock/reset
+  declarations are still treated as reviewer-facing contract gaps rather than
+  guaranteed execution blockers.
 
 ## Current Reading Aids
 
