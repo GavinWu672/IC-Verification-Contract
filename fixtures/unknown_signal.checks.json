@@ -1,0 +1,17 @@
+{
+  "signal_accesses": [
+    "clk",
+    "rst_n",
+    "valid_i",
+    "phantom_debug_o"
+  ],
+  "test_names": [
+    "cocotb_tests::test_unknown_signal_error_path",
+    "cocotb_tests::test_reset_cleanup_release"
+  ],
+  "exception_verified": true,
+  "cleanup_verified": true,
+  "failure_cases": [
+    "unknown DUT signal access"
+  ]
+}

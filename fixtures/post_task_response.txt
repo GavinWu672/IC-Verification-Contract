@@ -1,0 +1,16 @@
+[Governance Contract]
+LANG = Python
+LEVEL = L2
+SCOPE = feature
+PLAN = PLAN.md
+LOADED = SYSTEM_PROMPT, HUMAN-OVERSIGHT
+CONTEXT = repo -> cocotb signal-map validation; NOT: full protocol timing proof
+PRESSURE = SAFE (20/200)
+RULES = common,ic-verification
+RISK = medium
+OVERSIGHT = review-required
+MEMORY_MODE = candidate
+
+Add a Cocotb smoke test that drives valid_i and data_i after reset deassertion,
+then waits for ready_o before sampling data_o. Keep the signal list aligned with
+the contract signal map and call out any missing DUT interface assumptions.

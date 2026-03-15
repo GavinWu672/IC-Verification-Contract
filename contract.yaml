@@ -1,0 +1,19 @@
+name: ic-verification-contract
+plugin_version: "1.0.0"
+framework_interface_version: "1"
+framework_compatible: ">=1.0.0,<2.0.0"
+domain: ic-verification
+applies_to:
+  - cocotb
+  - testbench
+  - verification
+documents:
+  - IC_VERIFICATION_CHECKLIST.md
+  - IC_VERIFICATION_ARCHITECTURE.md
+  - docs/cocotb-start-session.md
+ai_behavior_override:
+  - AGENTS.md
+rule_roots:
+  - rules
+validators:
+  - validators/signal_map_validator.py

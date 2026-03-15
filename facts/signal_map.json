@@ -1,0 +1,33 @@
+{
+  "dut_name": "demo_stream_dut",
+  "top_module": "demo_stream_top",
+  "clock_signal": "clk",
+  "reset_signal": "rst_n",
+  "reset_polarity": "active_low",
+  "signals": {
+    "clk": {
+      "direction": "input",
+      "role": "clock"
+    },
+    "rst_n": {
+      "direction": "input",
+      "role": "reset"
+    },
+    "valid_i": {
+      "direction": "input",
+      "role": "handshake"
+    },
+    "ready_o": {
+      "direction": "output",
+      "role": "handshake"
+    },
+    "data_i": {
+      "direction": "input",
+      "role": "payload"
+    },
+    "data_o": {
+      "direction": "output",
+      "role": "payload"
+    }
+  }
+}

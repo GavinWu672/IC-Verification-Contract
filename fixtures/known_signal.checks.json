@@ -1,0 +1,15 @@
+{
+  "signal_accesses": [
+    "clk",
+    "rst_n",
+    "valid_i",
+    "ready_o",
+    "data_i"
+  ],
+  "test_names": [
+    "cocotb_tests::test_reset_sequence_failure_path",
+    "cocotb_tests::test_handshake_cleanup_release"
+  ],
+  "exception_verified": true,
+  "cleanup_verified": true
+}
