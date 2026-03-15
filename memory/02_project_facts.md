@@ -8,6 +8,10 @@
 - Phase-1 validators:
   - `signal_map_validator`
   - `clock_reset_validator`
+- Working intake documents:
+  - `FACT_INTAKE.md`
+  - `SOURCE_INVENTORY.md`
+  - `FACT_INTAKE_WORKSHEET.md`
 
 ## Pending
 

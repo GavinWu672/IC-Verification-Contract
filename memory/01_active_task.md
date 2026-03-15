@@ -12,3 +12,6 @@
 - The current contract now has two advisory validators:
   - `signal_map_validator`
   - `clock_reset_validator`
+- The next useful work is no longer more demo validators.
+- The next useful work is replacing placeholder DUT facts with real source-backed
+  values through the fact-intake path.

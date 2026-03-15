@@ -24,3 +24,11 @@
     - `ICV-CLKRST-001`
     - `ICV-CLKRST-003`
     - `ICV-CLKRST-005`
+
+## Current Reading Aids
+
+- `FACT_INTAKE.md`
+- `SOURCE_INVENTORY.md`
+- `FACT_INTAKE_WORKSHEET.md`
+- `WORKFLOW.md`
+- `VALIDATION_REQUIREMENTS.md`

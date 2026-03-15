@@ -25,6 +25,11 @@ This contract is meant to reduce a very specific Way B failure mode:
 - `AGENTS.md`
 - `IC_VERIFICATION_CHECKLIST.md`
 - `IC_VERIFICATION_ARCHITECTURE.md`
+- `FACT_INTAKE.md`
+- `SOURCE_INVENTORY.md`
+- `FACT_INTAKE_WORKSHEET.md`
+- `WORKFLOW.md`
+- `VALIDATION_REQUIREMENTS.md`
 - `facts/signal_map.json`
 - `rules/ic-verification/safety.md`
 - `validators/signal_map_validator.py`
@@ -62,3 +67,8 @@ The repo now includes:
 The current fixture flow uses `LANG = Python` in its governance contract so the
 repo reflects real Cocotb-style outputs instead of relying on a workaround
 language label.
+
+## Next Practical Step
+
+Use the new fact-intake documents to replace the demo DUT facts with a real
+signal map from your RTL or interface specification.
